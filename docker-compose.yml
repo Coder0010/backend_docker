@@ -1,4 +1,4 @@
-# Note Please make sure to change network name to ur project name 
+# Note Please make sure to change network name to ur project name
 volumes:
   php-fpm-socket:
   psysh-store:
@@ -57,7 +57,7 @@ services:
         source: .
         target: /var/www/
     ports:
-      - "${DOCKER_NGINX_NETWORK_PORT}:80" 
+      - "${DOCKER_NGINX_NETWORK_PORT}:80"
     depends_on:
       - php
     networks:
@@ -103,8 +103,6 @@ services:
       - PMA_PMADB=phpmyadmin
       - PMA_HOST=${DB_HOST}
       - PMA_PORT=${DB_PORT}
-      - PMA_USER=${DB_USERNAME}
-      - PMA_PASSWORD=${DB_PASSWORD}
       - PMA_USER=${DB_USERNAME}
       - PMA_PASSWORD=${DB_PASSWORD}
       - MYSQL_TCP_PORT=${DB_PORT}
